@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+html,body{
+  width: 100vw;
+  height: 100%;
+  background-image: url(Group\ 1.jpg);
+  overflow-x: hidden;
+}
+.navbar{
+    width: 100%;
+    height: 9vh;
+    /* background-color: #c8c8c8; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+.ham i{
+    font-size: 44px;
+    font-weight: 900;
+    opacity: 0;
+
+}
+.navbar li{
+   width: 85vw;
+    display: flex;
+    justify-content: space-between;
+}
+.list a{
+    text-decoration: none;
+    font-size: 6vh;
+    margin-left: 5vw;
+    color: burlywood;
+
+}
+.list a:hover{
+    color: rgb(255, 255, 255);
+}
+
+/* main */
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+.left-div{
+   width: 50%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.right-div{
+   width: 50%;
+   height: 100vh;
+}
+.left-div img{
+    height: 49vh;
+    animation: bread 10s infinite linear;
+
+}
+@keyframes bread {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.left-div img:hover{
+    /* height: 49vh; */
+    animation: breads 10s infinite linear;
+
+}
+@keyframes breads {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.right-div .content{
+    width: 90%;
+    margin: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right-div h1{
+    color: blanchedalmond;
+    margin-left: -200px;
+
+}
+.right-div .content button{
+    color: black;
+    margin-left: -412px;
+    padding: 9px 20px;
+    margin-top: 3vh;
+    font-weight: 900;
+    font-size: 19px;
+    background-color: burlywood;
+
+    
+}
+.right-div .content button:hover{
+    color: red;
+    background-color: #fff;
+}
+
+.container .text{
+    text-align: center;
+    color: rgb(230, 149, 28);
+    margin: 9vh;
+}
+/* card */
+.cards{
+    width: 100%;
+    height: 100vh;
+   /* display: inline; */
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+   grid-template-rows: auto; /* Automatically sized rows */
+   gap: 10px; /* Gap between grid items */
+
+}
+.cards .card-body{
+    background-color: burlywood;
+}
+.cards button{
+    background-color: blanchedalmond;
+    font-weight: 900;
+}
+.cards .card-body p{
+    color: black;
+    font-weight: 500;
+}
+.card-body .card-text img{
+    animation: rotate infinite 10s linear;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.card-body .card-text img:hover{
+    animation: none;
+}
+
+/* footer */
+.footer{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    margin-top: 19vh;
+}
+.footer .footer-info{
+    margin-top: 50vh;
+}
+
+
+/* resposive */
+@media screen and (min-width:300px) and (max-width: 700px) {
+   
+ .navbar li  a {
+        /* font-size: vh; */
+        color: burlywood;
+
+    }
+     
+    .ham i {
+        opacity: 1;
+        color: burlywood;
+        /* margin: 3vh; */
+        position: absolute;
+        top: 1vh;
+        right: 1vw;
+    }
+    .navbar li {
+        width: 85vw;
+        height: 44vh;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        opacity: 0;
+    }
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+  }
+  .right-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+  } 
+  .right-div .content h1{
+    width: 100vw;
+   margin-left: 29vw;
+  }
+  .right-div .content button{
+   margin-left: -57vw;
+  }
+.cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with minimum column width of 200px */
+    gap: 5px; /* Gap between grid items */  
+    margin: 0 auto;
+}
+
+.footer{
+    height: 100%;
+    width: 100%;
+    margin-top: -10vh;
+}
+
+
+}
+
+
+
